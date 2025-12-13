@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .chat-bubble {
+    @apply rounded-2xl px-4 py-3 max-w-xs sm:max-w-md lg:max-w-lg shadow-sm;
+  }
+  
+  .user-bubble {
+    @apply bg-blue-600 text-white ml-auto animate-fade-in;
+  }
+  
+  .ai-bubble {
+    @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 mr-auto animate-fade-in border border-gray-200 dark:border-gray-700;
+  }
+  
+  .mode-toggle {
+    @apply px-6 py-2 rounded-full font-medium transition-all duration-300 ease-in-out;
+  }
+  
+  .mode-active {
+    @apply bg-blue-600 text-white shadow-lg;
+  }
+  
+  .mode-inactive {
+    @apply bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600;
+  }
+}
