@@ -4,7 +4,8 @@ import ChatArea from './components/ChatArea'
 import InputSection from './components/InputSection'
 import { useTheme } from './hooks/useTheme'
 
-const API_BASE = 'http://localhost:5000'
+const API_BASE = import.meta.env.VITE_API_BASE;
+
 
 function App() {
   const [mode, setMode] = useState('translator')
