@@ -50,8 +50,8 @@ function App() {
         const aiResponse = {
           id: Date.now() + 1,
           type: 'ai',
-          content: data.translated_text
-            ? `${data.translated_text}`
+          content: data.message
+            ? `${data.message}`
             : '❌ Translation failed or no response.',
           timestamp: new Date()
         }
@@ -71,6 +71,8 @@ function App() {
       }
     } else {
       // Mode = assistant → Under progress
+
+      
       setTimeout(() => {
         const aiResponse = {
           id: Date.now() + 1,
